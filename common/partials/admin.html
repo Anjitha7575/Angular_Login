@@ -1,0 +1,38 @@
+<div ng-include="'common/partials/header.html'"></div>
+<div class="col-md-12">
+	<div class="col-md-6">Showing {{currentPage+1}} to {{numberOfPages()}} of {{numberOfPages()}} entries  </div>
+      <div class="input-group pull-right">
+	  <span class="col-md-6">
+      <input class="form-control" ng-model="searchText" placeholder="Search" type="search" />
+	  </span>
+      
+	  <span class="col-md-6">
+	  <button class="btn btn-secondary" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+			Previous
+		</button>
+		<span class="btn btn-primary">{{currentPage+1}}/{{numberOfPages()}}</span>
+		<button class="btn btn-secondary" ng-disabled="currentPage >= getData().length/pageSize - 1" ng-click="currentPage=currentPage+1">
+			Next
+		</button>
+	  </span>
+        </div>
+
+        <table class="table  table-hover table-striped">
+            <thead>
+                <tr>
+                    <th class="" ng-repeat="heading in headerInfo">{{heading.header}} <span ng-click="sortKeys(respObj,heading.key)"> <i class="fa fa-sort" aria-hidden="true"></i></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in data | filter:searchText | startFrom:currentPage*pageSize | limitTo:pageSize">
+             <td>{{item.id}}</td>
+			 <td>{{item.fname}}</td>
+			 <td>{{item.lname}}</td>
+			 <td>{{item.pswd}}</td>
+				</tr>
+            </tbody>
+        </table>
+		</div>
+    
+      <a ui-sref="login">Back</a>
+</div>

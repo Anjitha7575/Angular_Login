@@ -1,0 +1,15 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand header" href="#">
+	  <img src="assets\images\ionos.jpg" alt="logo" />
+	  </a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li ui-sref-active="active active-tab" ng-if="respObj.isAuthenticated && respObj.isAdmin"><a  ui-sref="edit"><i class="fa fa-tachometer" aria-hidden="true"></i>Add User</a></li>
+      <li ui-sref-active="active active-tab" ng-if="respObj.isAuthenticated && respObj.isAdmin"><a  ui-sref="view"><i class="fa fa-exchange" aria-hidden="true"></i>View User</a></li>
+      <li ui-sref-active="active active-tab" ng-if="respObj.isAuthenticated && !respObj.isAdmin"><a ui-sref="myProfile"><i class="fa fa-tachometer" aria-hidden="true"></i>My Profile</a></li>
+      <li ui-sref-active="active active-tab" ng-if="respObj.isAuthenticated"><a  ng-click="logout()" ui-sref="login"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign Out</a></li>
+    </ul>
+  </div>
+</nav>

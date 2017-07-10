@@ -1,0 +1,41 @@
+<div ng-include="'common/partials/header.html'"></div>
+<div class="col-md-12">
+<h4>My Profile</h4>
+<form ng-submit="updateUser()" class="form">
+        <div class="col-md-6">
+          <div class="form-group">
+		  <label>User ID</label>
+            <input type="text" class="form-control" ng-model="myData.id" placeholder="User ID" readonly  required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+		  <label>Password</label>
+            <input type="text" class="form-control" ng-model="myData.pswd" placeholder="Password"  required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+		  <label>First Name</label>
+            <input type="text" class="form-control" ng-model="myData.fname" placeholder="First Name"  required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+		  <label>Last Name</label>
+            <input type="text" class="form-control" ng-model="myData.lname" placeholder="Last Name"  required=""/>
+          </div> 
+		  </div>	
+		
+		 <div class="col-md-1">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Update</button>
+          </div>
+		  </div
+
+        </div>
+      </form>
+</div>

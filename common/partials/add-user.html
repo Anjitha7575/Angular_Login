@@ -1,0 +1,36 @@
+<div ng-include="'common/partials/header.html'"></div>
+<div class="col-md-12">
+<form ng-submit="addUser()" class="form">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="usrName" placeholder="User ID" required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="passwrd" placeholder="Password" required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="first" placeholder="First Name" required=""/>
+          </div> 
+		  </div>
+		  
+		  <div class="col-md-6">
+          <div class="form-group">
+            <input type="text" class="form-control" ng-model="last" placeholder="Last Name" required=""/>
+          </div> 
+		  </div>	
+		
+		 <div class="col-md-1">
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">AddUser</button>
+          </div>
+		  </div
+
+        </div>
+      </form>
+</div>
